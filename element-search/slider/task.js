@@ -24,8 +24,10 @@ for (let i = 0; i < sliderArrows.length; i++) {
             if (sliderArrows[i].classList.contains('slider__arrow_prev')) {
                 if (activeSlideNumber === 0) {
                     slider[slider.length - 1].classList.add(acitveSliderClassName);
+                    dots[slider.length - 1].classList.add(activeDotClassName);
                 } else {
                     slider[activeSlideNumber - 1].classList.add(acitveSliderClassName);
+                    dots[activeSlideNumber - 1].classList.add(activeDotClassName);
                 }
             } 
 
