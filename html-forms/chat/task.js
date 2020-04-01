@@ -26,7 +26,7 @@ input.addEventListener('keydown', function (event) {
 })
 
 input.addEventListener('messageSend', function () {
-    let arrayMessages = ['Добрый день!', 'Напишите нам позже', 'Все операторы заняты', 'До свидания!', 'Мы ничего не будем Вам продавать!'];
+    let arrayMessages = ['Р”РѕР±СЂС‹Р№ РґРµРЅСЊ!', 'РќР°РїРёС€РёС‚Рµ РЅР°Рј РїРѕР·Р¶Рµ', 'Р’СЃРµ РѕРїРµСЂР°С‚РѕСЂС‹ Р·Р°РЅСЏС‚С‹', 'Р”Рѕ СЃРІРёРґР°РЅРёСЏ!', 'РњС‹ РЅРёС‡РµРіРѕ РЅРµ Р±СѓРґРµРј Р’Р°Рј РїСЂРѕРґР°РІР°С‚СЊ!'];
     shuffle(arrayMessages);
     let date = new Date();
     messages.innerHTML += `
