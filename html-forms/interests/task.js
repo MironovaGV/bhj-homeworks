@@ -28,22 +28,25 @@ function selectParent(li) {
         let currentsLi = currentUl.querySelectorAll('li.interest');
         let parentInput = parentLi.querySelector('input.interest__check');
 
-        let isAllChecked = true;
+        let checked = 0;
 
         for (let i = 0; i < currentsLi.length; i++) {
-            isAllChecked = currentsLi[i].querySelector('input.interest__check').checked;
-
-            if (!isAllChecked) {
-                parentInput.indeterminate = true;
-                break;
+            if (currentsLi[i].querySelector('input.interest__check').checked) {
+                checked++;
             }
         }
 
-        if (isAllChecked) {
-            parentInput.indeterminate = false;
-            parentInput.checked = true;
-        }
+        if (checked != 0) {
+            parentInput.indeterminate = true;
 
+            if (checked == currentsLi.length) {
+                parentInput.indeterminate = false;
+                parentInput.checked = true;
+            }
+        } else {
+            parentInput.indeterminate = false;
+            parentInput.checked = false;
+        }
         selectParent(parentLi);
     }
 }
