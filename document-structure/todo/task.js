@@ -8,6 +8,7 @@ form.addEventListener('submit', function (event) {
 
     if (event.target[0].value.length > 0) {
         addTask(inputText.value);
+        event.target.reset();
     }
 
 
